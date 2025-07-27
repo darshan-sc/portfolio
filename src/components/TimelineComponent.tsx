@@ -25,7 +25,7 @@ const myEvents: TimelineEntry[] = [
     iconType: "work",
   },
   {
-    date: "Jun 2023 - Dec 2024",
+    date: "July 2018 - July 2022",
     title: "BTech. in CSE",
     subtitle: "Vellore Institue Of Technology, VIT",
     iconType: "education",
