@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+@theme {
+  /* Typography */
+  --font-body:    'Roboto', sans‑serif;
+  --font-heading: 'Poppins', sans‑serif;
+
+  /* Monochrome colors */
+  --color-bg:     #ffffff;
+  --color-text:   #000000;
+  --color-accent: #444444;   /* dark gray instead of pure black */
+  --color-muted:  #666666;
+}
+
+
