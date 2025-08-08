@@ -21,7 +21,7 @@ const myEvents: TimelineEntry[] = [
     date: "Jan 2022 - June 2022",
     title: "Software Engineer Intern",
     subtitle: "Fareportal",
-    description: "Built proof-of-concepts, wrote unit tests and worked on migration to kubernetes.",
+    description: "Built proof-of-concepts, wrote unit tests and worked on migrating from windows server to kubernetes.",
     iconType: "work",
   },
   {
