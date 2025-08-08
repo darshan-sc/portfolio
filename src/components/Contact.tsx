@@ -17,7 +17,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/darshan-se/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" hover:text-accent transition"
+                className=" hover:text-hover transition"
                 aria-label="LinkedIn"
               >
               <AiFillLinkedin className="text-4xl mb-2" />
@@ -27,7 +27,7 @@ export default function Contact() {
           <li>
             <a
               href="mailto:darshanjainc@gmail.com"
-              className="flex flex-col items-center text-text hover:text-accent transition"
+              className="flex flex-col items-center text-text hover:text-hover transition"
             >
               <AiOutlineMail className="text-4xl mb-2" />
               <span className="font-body">Email</span>

@@ -9,10 +9,10 @@ export default function Navbar() {
       <div className="flex items-center justify-end px-6 py-4 md:px-8 md:py-6">
         {/* Desktop links */}
         <div className="hidden md:flex space-x-8  font-body">
-          <a href="#projects" className="hover:text-accent transition">
+          <a href="#projects" className="hover:text-hover transition">
             Projects
           </a>
-          <a href="#contact" className="hover:text-accent transition">
+          <a href="#contact" className="hover:text-hover transition">
             Contact
           </a>
         </div>
@@ -34,14 +34,14 @@ export default function Navbar() {
             <a
               href="#projects"
               onClick={() => setOpen(false)}
-              className="text-lg font-body hover:text-accent transition"
+              className="text-lg font-body hover:text-hover transition"
             >
               Projects
             </a>
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="text-lg font-body hover:text-accent transition"
+              className="text-lg font-body hover:text-hover transition"
             >
               Contact
             </a>

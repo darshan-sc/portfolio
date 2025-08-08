@@ -11,6 +11,9 @@
   --color-text:   #000000;
   --color-accent: #444444;   /* dark gray instead of pure black */
   --color-muted:  #666666;
+  
+  /* Hover color - sophisticated blue */
+  --color-hover:  #2563eb;   /* blue-600 from Tailwind */
 }
 
 

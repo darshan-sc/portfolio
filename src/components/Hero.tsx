@@ -23,7 +23,7 @@ export default function Hero() {
             href="https://www.linkedin.com/in/darshan-se/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl hover:text-accent transition"
+            className="text-2xl hover:text-hover transition"
             aria-label="LinkedIn"
           >
             <AiFillLinkedin />
@@ -32,7 +32,7 @@ export default function Hero() {
             href="https://github.com/darshan-sc"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl hover:text-accent transition"
+            className="text-2xl hover:text-hover transition"
             aria-label="GitHub"
           >
             <AiFillGithub />
