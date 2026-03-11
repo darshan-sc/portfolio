@@ -6,14 +6,23 @@
   --font-body:    'Roboto', sans‑serif;
   --font-heading: 'Poppins', sans‑serif;
 
-  /* Monochrome colors */
-  --color-bg:     #ffffff;
-  --color-text:   #000000;
-  --color-accent: #444444;   /* dark gray instead of pure black */
-  --color-muted:  #666666;
+  /* Editorial Minimal Palette */
+  --color-bg:     #fdfdfc;   /* Paper White */
+  --color-text:   #000000;   /* Pitch Black */
+  --color-accent: #0047FF;   /* Cobalt Blue */
+  --color-muted:  #333333;   /* Charcoal */
   
-  /* Hover color - sophisticated blue */
-  --color-hover:  #2563eb;   /* blue-600 from Tailwind */
+  /* Hover color */
+  --color-hover:  #0033cc;   /* Darker Cobalt */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 

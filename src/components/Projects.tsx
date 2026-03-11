@@ -1,4 +1,5 @@
 import { AiFillGithub } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects = [
@@ -11,68 +12,79 @@ export default function Projects() {
       repo: "https://github.com/darshan-sc/NLPResearchAgent",
       date: "May 2025 - Jun 2025",
     },
-    // {
-    //   title: "Project Two",
-    //   about: "Real-time dashboard for monitoring Y metrics",
-    //   description:
-    //     "Designed a React + D3 dashboard, integrated with a .NET Core Web API backend.",
-    //   skills: ["React", "D3.js", ".NET Core", "WebSockets"],
-    //   repo: "https://github.com/your-username/project-two",
-    //   date: "Apr 2024 - Jun 2024",
-    // },
+    {
+      title: "Research Nexus",
+      about: "Intelligent Research Workspace",
+      description: "Architected a full-stack research platform unifying experiment logs and literature using Supabase Auth. Engineered a RAG pipeline with PostgreSQL + pgvector for vector search. Orchestrated multi-container services via Docker Compose for FastAPI and PostgreSQL with 100% environment parity.",
+      skills: ["Python", "FastAPI", "React", "PostgreSQL", "Docker", "OpenAI"],
+      date: "2025",
+    },
     {
       title: "Mini Shell",
       about: "A Custom Posix-Style Shell",
       description:
-        `A POSIX-style command-line shell in C, featuring tokenization, environment-variable expansion, and
-        support for built-ins (cd, pwd, exit), inline variable assignment, and error handling.`,
+        `A POSIX-style command-line shell in C, featuring tokenization, environment-variable expansion, and support for built-ins (cd, pwd, exit), inline variable assignment, and error handling.`,
       skills: ["C", "Shell", "Operating Systems"],
-      // repo: "https://github.com/darshan-sc/mini-shell",
       date: "Feb 2025 - Mar 2025",
     },
   ];
 
   return (
-    <section id="projects" className="bg-bg py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-4xl text-text mb-8 text-center border-b-2 border-text pb-2">Projects</h2>
+    <section id="projects" className="bg-bg py-24 sm:py-32">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="font-heading text-5xl sm:text-6xl text-text font-bold mb-16 tracking-tighter"
+        >
+          Selected Works
+        </motion.h2>
 
-        <div className="space-y-6">
+        <div className="flex flex-col">
           {projects.map((p, index) => (
-            <div key={p.title} className="bg-white rounded-lg p-6 border border-gray-200">
-              <div className="flex justify-between items-start mb-3">
-                <h3 className="font-heading text-xl text-text font-semibold">{p.title}</h3>
-                {index !== 2 ? (
+            <motion.div 
+              key={p.title} 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: index * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="group border-t border-black/10 py-12 first:border-t-0 flex flex-col lg:flex-row lg:justify-between lg:items-start gap-8"
+            >
+              <div className="lg:w-1/3">
+                <h3 className="font-heading text-3xl sm:text-4xl text-text font-bold tracking-tight mb-2 group-hover:text-accent transition-colors">{p.title}</h3>
+                <p className="font-body text-muted text-sm uppercase tracking-widest font-semibold mb-4">{p.about}</p>
+                <div className="flex items-center text-sm font-mono text-muted">
+                  {p.date}
+                </div>
+              </div>
+              
+              <div className="lg:w-7/12">
+                <p className="font-body text-lg text-text/90 leading-relaxed mb-8">{p.description}</p>
+                <div className="flex flex-wrap gap-x-6 gap-y-3 mb-8">
+                  {p.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="font-mono text-[11px] uppercase tracking-widest text-text font-bold"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+                {p.repo && (
                   <a
                     href={p.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-muted hover:text-hover transition flex items-center"
+                    className="inline-flex items-center space-x-2 font-mono text-sm uppercase tracking-widest text-text hover:text-accent font-bold transition-colors"
                     aria-label={`View ${p.title} on GitHub`}
                   >
-                    <AiFillGithub className="mr-1" />
-                    {p.date}
+                    <AiFillGithub className="text-xl" />
+                    <span>Repository</span>
                   </a>
-                ) : (
-                  <div className="text-sm text-muted transition flex items-center">
-                    <AiFillGithub className="mr-1" />
-                    {p.date}
-                  </div>
                 )}
               </div>
-              <p className="font-body text-text/80 italic mb-3 text-sm">{p.about}</p>
-              <p className="font-body text-text/90 mb-4 leading-relaxed">{p.description}</p>
-              <div className="flex flex-wrap gap-2">
-                {p.skills.map((skill, skillIndex) => (
-                  <span
-                    key={skillIndex}
-                    className="bg-gray-100 text-text/80 px-3 py-1 rounded-full text-xs font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

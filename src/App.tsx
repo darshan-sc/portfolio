@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
+import Publications from './components/Publications'
 import Contact from './components/Contact'
 import TimelineComponent from './components/TimelineComponent'
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Hero />
       <Projects />
+      <Publications />
       <TimelineComponent />
       <Contact />
     </>

@@ -1,29 +1,52 @@
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="hero" className="bg-bg py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="hero" className="pt-40 pb-24 sm:pt-48 sm:pb-32">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Eyebrow */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="font-mono text-sm sm:text-base uppercase tracking-widest text-accent font-bold mb-6"
+        >
+          Darshan Chudiwal
+        </motion.p>
+
         {/* Greeting */}
-        <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl text-text mb-4 text-left">
-          Hello, I’m Darshan.
-        </h1>
+        <motion.h1 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-text mb-8 text-left leading-[1.1]"
+        >
+          Software Engineer building scalable systems<span className="text-accent">.</span>
+        </motion.h1>
 
         {/* About */}
-        <p className="font-body text-base sm:text-lg text-muted mb-8 leading-relaxed text-left">
-          I’m currently pursuing my MS in Computer Science at Penn State.  
-          I have experience in building microservices, React micro‑frontends, and I'm currently exploring AI/ML research.  
-          I like to watch movies, and read books when I'm not working!
-        </p>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          className="font-body text-lg sm:text-xl md:text-2xl text-muted mb-12 max-w-3xl leading-relaxed text-left"
+        >
+          I’ve spent 2+ years building software that handles real stakes — payment workflows, fraud systems, and product interfaces people rely on daily. I work across the stack, care about writing software that holds up under pressure, and I’m currently pursuing my MS in Computer Science at Penn State.
+        </motion.p>
 
         {/* Social links */}
-        <div className="flex space-x-6">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex space-x-8"
+        >
           <a
             href="https://www.linkedin.com/in/darshan-se/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl hover:text-hover transition"
+            className="text-3xl sm:text-4xl text-text hover:text-accent transition-colors"
             aria-label="LinkedIn"
           >
             <AiFillLinkedin />
@@ -32,12 +55,12 @@ export default function Hero() {
             href="https://github.com/darshan-sc"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-2xl hover:text-hover transition"
+            className="text-3xl sm:text-4xl text-text hover:text-accent transition-colors"
             aria-label="GitHub"
           >
             <AiFillGithub />
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
