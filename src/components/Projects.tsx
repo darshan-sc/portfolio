@@ -4,6 +4,15 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const projects = [
     {
+      title: "Parallel File System",
+      about: "Distributed File System in Go",
+      description:
+        "Implemented a distributed file system built in Go that stripes data across independent storage nodes for parallel I/O. A dedicated metadata server handles coordination — locking, routing, and cache invalidation — while file servers handle raw block storage.",
+      skills: ["Go", "gRPC", "Protobuf", "Distributed Systems"],
+      repo: "https://github.com/darshan-sc/parallel-file-system",
+      date: "Feb 2026 - Mar 2026",
+    },
+    {
       title: "LLM NLP Expert",
       about: "Fine-tuning LLMs to be an NLP expert",
       description:
@@ -17,6 +26,7 @@ export default function Projects() {
       about: "Intelligent Research Workspace",
       description: "Architected a full-stack research platform unifying experiment logs and literature using Supabase Auth. Engineered a RAG pipeline with PostgreSQL + pgvector for vector search. Orchestrated multi-container services via Docker Compose for FastAPI and PostgreSQL with 100% environment parity.",
       skills: ["Python", "FastAPI", "React", "PostgreSQL", "Docker", "OpenAI"],
+      repo: "https://github.com/darshan-sc/lab-assistant",
       date: "2025",
     },
     {
